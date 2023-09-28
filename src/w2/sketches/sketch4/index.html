@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=4.0" />
+    <title>최은진 w2_sketch4</title>
+    <link rel="stylesheet" href="../../../../style/style.css" />
+    <link rel="stylesheet" href="../../../../plugin/prism/prism.css" />
+    <script src="../../../../plugin/prism/prism.js">
+      defer
+    </script>
+    <script src="./script/alertPromptConfirm.js"></script>
+    <!-- head 에다가 아래 script 작성시 오류 발생. 그래서 이런 스크립트 작성 시 푸터 아래에 작성 하도록 -->
+    <!-- body 안쪽에 있는 요소와 인터렉션 하려면 반드시 코드가 바디가 끝나고 나서 실행해야함.  -->
+    <!-- <script>
+      let userName = prompt('당신의 이름은 무엇입니까', '홍길동');
+      let isUserNameCorrect = confirm(
+        '당신의 이름이' + userName + '이 맞습니까?'
+      );
+      if (isUserNameCorrect == true) {
+        document.getElementById('user-name-goes-here').textContent =
+          '환영합니다. ' + userName + ' 님';
+      }
+    </script> -->
+  </head>
+  <body>
+    <div class="viewport">
+      <!-- .viewport : 스크롤이 가능해짐  -->
+      <header>
+        <section>
+          <div class="container">
+            <h4>최은진 w2_sketch4</h4>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section>
+          <div class="container">
+            <h2 id="user-name-goes-here"></h2>
+            <!-- 환영합니다 홍길동님 -->
+          </div>
+        </section>
+      </main>
+      <footer>
+        <section>
+          <div class="container">
+            <h2>코드</h2>
+            <h6>index.html</h6>
+            <pre
+              class="line-numbers"
+              data-src="./index.html"
+              data-download-link></pre>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script>
+      let userName = prompt('당신의 이름은 무엇입니까', '홍길동');
+      let isUserNameCorrect = confirm(
+        '당신의 이름이' + userName + '이 맞습니까?'
+      );
+      if (isUserNameCorrect == true) {
+        document.getElementById('user-name-goes-here').textContent =
+          '환영합니다. ' + userName + ' 님';
+      }
+    </script>
+  </body>
+</html>
