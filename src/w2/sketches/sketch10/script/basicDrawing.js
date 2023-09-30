@@ -8,8 +8,13 @@ function draw() {
   background(255);
 
   //   한번 더 돌때 첫 줄의 도형에 주황색으로 물들지 않기 위해 fill 을 입력해줘야 함
+  // 루프로 인해 아래서 적용한 설정이 타고 넘어오는 것을 방지하기 위해 초기화
+  // 초기 설정을 먼저 해주는 것이 좋음/
   fill(255);
   rectMode(CORNER);
+  colorMode(RGB);
+  stroke(0);
+  strokeWeight(1);
   // rect or ellipse(X,Y,가로, 세로)
   ellipse(100, 100, 50);
   rect(100, 100, 50, 50);
@@ -33,6 +38,25 @@ function draw() {
   //   첫줄 도형과 두번째 줄 원 빼고 색이 입혀짐
   circle(200, 200, 50);
   colorMode(HSL);
+  // 칼라모드 하나 설정한 것이 루프돌아서 또 영향을 미친것.
+  fill(200, 100, 50);
   rect(300, 200, 50);
+  noStroke();
   square(400, 200, 50);
+
+  rect(100, 300, 50, 50, 10);
+  rect(200, 300, 50, 50, 5, 10, 15, 20);
+
+  stroke(0);
+  line(100, 400, 150, 450);
+
+  stroke('royalblue');
+  line(200, 400, 250, 400);
+  stroke('salmon');
+
+  strokeWeight(5);
+  line(250, 400, 250, 450);
+  stroke('slateblue');
+  strokeWeight(10);
+  line(250, 450, 200, 450);
 }
