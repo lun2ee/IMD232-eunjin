@@ -30,6 +30,7 @@ function draw() {
 
   cvToMv.mult(0.5);
   //   cvToMv stroke 를 딱 절반만 black 4 로 칠해주기
+  //   mult 라는 내장되어있는 함수를 이용해서, 백터의 길이를 절반으로 줄이기
   stroke('black');
   strokeWeight(4);
   line(0, 0, cvToMv.x, cvToMv.y);
