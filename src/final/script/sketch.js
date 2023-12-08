@@ -1,14 +1,14 @@
 let lineCount = 0;
 
 function setup() {
-  setCanvasContainer('mySketchGoesHere', 6, 4, true);
+  setCanvasContainer('mySketchGoesHere', 1, 1, true);
   background(0);
 }
 
 function draw() {
   translate(width / 2, height / 2);
 
-  if (lineCount < 100) {
+  if (lineCount < 30) {
     let v = p5.Vector.random2D();
     v.mult(random(100, 300));
 
